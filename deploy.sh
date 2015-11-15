@@ -17,6 +17,7 @@ git reset upstream/gh-pages
 git clone https://github.com/designiot/designiot.github.io testdir
 
 mv testdir/* .
+rm -rf testdir
 
 rm CNAME
 echo "echeveria-deploy-test.phodal.com" > CNAME
