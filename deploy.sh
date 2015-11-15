@@ -27,8 +27,6 @@ grunt
 mv dest/* ../
 cd ../
 rm -rf code
-rm CNAME
-echo "deploy-test.baimizhou.net" > CNAME
 
 touch .
 
