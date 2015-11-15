@@ -16,13 +16,15 @@ git reset upstream/gh-pages
 
 git clone https://github.com/phodal-archive/echeveria-code code
 cd code
-git clone https://github.com/phodal-archive/echeveria-content content
+git clone https://github.com/phodal-archive/echeveria-content code/content
 npm install
 npm install grunt-cli -g
 grunt 
 mv dest/* ../
 cd ../
 rm -rf code
+rm CNAME
+echo "deploy-test.baimizhou.net" > CNAME
 
 touch .
 
