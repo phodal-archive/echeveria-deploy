@@ -14,7 +14,7 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal-archive/echeveria-d
 git fetch upstream
 git reset upstream/gh-pages
 
-echo "rustbyexample.com" > CNAME
+echo "echeveria-deploy-test.phodal.com" > CNAME
 
 touch .
 
