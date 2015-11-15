@@ -14,13 +14,14 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal-archive/echeveria-d
 git fetch upstream
 git reset upstream/gh-pages
 
-git clone https://github.com/designiot/designiot.github.io testdir
-
-mv testdir/* .
-rm -rf testdir
-
-rm CNAME
-echo "deploy-test.baimizhou.net" > CNAME
+git clone https://github.com/phodal-archive/echeveria-code code
+cd code
+git clone https://github.com/phodal-archive/echeveria-content content
+npm install
+grunt 
+mv dest/* ../
+cd ../
+rm -rf code
 
 touch .
 
