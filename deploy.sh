@@ -15,8 +15,11 @@ git fetch upstream
 git reset upstream/gh-pages
 
 git clone https://github.com/phodal-archive/echeveria-code code
+git clone https://github.com/phodal-archive/echeveria-content content
+cp -a content/content code/content
+
 cd code
-git clone https://github.com/phodal-archive/echeveria-content code/content
+
 npm install
 npm install grunt-cli -g
 grunt 
