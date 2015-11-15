@@ -18,6 +18,7 @@ git clone https://github.com/phodal-archive/echeveria-code code
 cd code
 git clone https://github.com/phodal-archive/echeveria-content content
 npm install
+npm install grunt -g
 grunt 
 mv dest/* ../
 cd ../
