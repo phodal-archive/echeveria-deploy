@@ -14,7 +14,7 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal-archive/echeveria-d
 git fetch upstream
 git reset upstream/gh-pages
 
-git clone git@github.com:designiot/designiot.github.io.git testdir
+git clone https://github.com/designiot/designiot.github.io testdir
 
 mv testdir/* .
 
