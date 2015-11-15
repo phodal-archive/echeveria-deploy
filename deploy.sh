@@ -4,7 +4,7 @@ set -o errexit -o nounset
 
 rev=$(git rev-parse --short HEAD)
 
-cd stage/_book
+cd stage/
 
 git init
 git config user.name "Robot"
