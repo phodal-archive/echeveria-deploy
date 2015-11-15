@@ -27,8 +27,13 @@ grunt
 mv dest/* ../
 cd ../
 rm -rf code
+rm -rf content
 
 touch .
+
+if [ ! -f CNAME ]; then
+    echo "deploy-test.baimizhou.net" > CNAME
+fi
 
 git add -A .
 git commit -m "rebuild pages at ${rev}"
