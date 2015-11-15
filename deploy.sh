@@ -20,7 +20,7 @@ mv testdir/* .
 rm -rf testdir
 
 rm CNAME
-echo "echeveria-deploy-test.phodal.com" > CNAME
+echo "deploy-test.baimizhou.net" > CNAME
 
 touch .
 
