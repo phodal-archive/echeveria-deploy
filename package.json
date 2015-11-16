@@ -1,14 +1,21 @@
 {
-  "name": "echeveria-deploy-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "echieveria-code",
+  "description": "echieveria-code",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://git.realestate.com.au/casa/homepage-workshop"
+  },
   "dependencies": {
-    "travis-encrypt": "^1.1.2"
-  }
+    "grunt": "~0.4.3",
+    "assemble": "~0.4.37",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "keywords": []
 }

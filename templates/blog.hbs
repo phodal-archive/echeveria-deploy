@@ -1,0 +1,23 @@
+<article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-meta">
+        <a href="{{blog-post.url }}" class="article-date">
+            <time datetime="{{blog-post.date }}" itemprop="datePublished">{{blog-post.date }}</time>
+        </a>
+    </div>
+
+    <div class="article-inner">
+        <input type="hidden" class="isFancy"/>
+        <header class="article-header">
+            <h1 itemprop="name">
+                <a class="article-title" href="{{blog-post.url }}">{{blog-post.title }}</a>
+            </h1>
+        </header>
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                {{#markdown}}
+                    {{blog-post.description }}
+                {{/markdown}}
+            </p>
+        </div>
+    </div>
+</article>
