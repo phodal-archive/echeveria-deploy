@@ -14,7 +14,7 @@ git remote add upstream "https://$GH_TOKEN@github.com/phodal-archive/echeveria-d
 git fetch upstream
 git reset upstream/gh-pages
 
-git clone https://github.com/phodal-archive/echeveria-code code
+git clone https://github.com/phodal-archive/echeveria-deploy-test code
 git clone https://github.com/phodal-archive/echeveria-content content
 pwd
 cp -a content/contents code/content
