@@ -12,7 +12,7 @@ module.exports = function(grunt) {
   'use strict';
 
 
-  var recipeTemplate = grunt.file.read('./templates/blog.hbs');
+  var recipeTemplate = grunt.file.read('./templates/blog/blog.hbs');
 
 // expand the data files and loop over each filepath
   var pages = _.flatten(_.map(grunt.file.expand('./content/*.json'), function(filepath) {
