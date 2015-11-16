@@ -33,6 +33,7 @@ module.exports = function(grunt) {
     clean: ['dest/'],
     assemble: {
       options: {
+        plugins: ['sitemap'],
         flatten: true,
         partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
