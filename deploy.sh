@@ -10,11 +10,11 @@ git init
 git config user.name "Robot"
 git config user.email "robot@phodal.com"
 
-git remote add upstream "https://$GH_TOKEN@github.com/phodal-archive/echeveria-deploy-test.git"
+git remote add upstream "https://$GH_TOKEN@github.com/phodal-archive/echeveria-deploy.git"
 git fetch upstream
 git reset upstream/gh-pages
 
-git clone https://github.com/phodal-archive/echeveria-deploy-test code
+git clone https://github.com/phodal-archive/echeveria-deploy code
 git clone https://github.com/phodal-archive/echeveria-content content
 pwd
 cp -a content/contents code/content
@@ -32,7 +32,7 @@ rm -rf content
 touch .
 
 if [ ! -f CNAME ]; then
-    echo "deploy-test.baimizhou.net" > CNAME
+    echo "deploy.baimizhou.net" > CNAME
 fi
 
 git add -A .
