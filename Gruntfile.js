@@ -5,9 +5,29 @@
  * Licensed under the MIT license.
  */
 
+var _ = require('lodash');
+var path = require('path');
 
 module.exports = function(grunt) {
   'use strict';
+
+
+  var recipeTemplate = grunt.file.read('./templates/blog.hbs');
+
+// expand the data files and loop over each filepath
+  var pages = _.flatten(_.map(grunt.file.expand('./content/*.json'), function(filepath) {
+    var data = grunt.file.readJSON(filepath);
+
+    // create a 'page' object to add to the 'pages' collection
+    return {
+      // the filename will determine how the page is named later
+      filename: path.basename(filepath, path.extname(filepath)),
+      // the data from the json file
+      data: data,
+      // add the recipe template as the page content
+      content: recipeTemplate
+    };
+  }));
 
   grunt.initConfig({
     clean: ['dest/'],
@@ -21,6 +41,18 @@ module.exports = function(grunt) {
       },
       site: {
         files: {'dest/': ['templates/*.hbs']}
+      },
+      blogs: {
+        options: {
+          flatten: true,
+          layoutdir: 'templates/layouts',
+          data: 'content/*.json',
+          partials: ['templates/includes/*.hbs'],
+          pages: pages
+        },
+        files: [
+          { dest: './dest/blog/', src: '!*' }
+        ]
       }
     },
     copy: {
