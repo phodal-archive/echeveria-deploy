@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         flatten: true,
         partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
-        data: 'content/*.json',
+        data: 'content/blogs.json',
         layout: 'default.hbs'
       },
       site: {
