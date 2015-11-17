@@ -1,4 +1,14 @@
 ---
 title: About
 description: This is the about page.
+content: ./data/about.md
 ---
+<section id="main">
+    <article class="article article-type-post" itemscope itemprop="blogPost">
+        <div class="article-inner">
+            <div class="article-entry" itemprop="articleBody">
+                {{md content}}
+            </div>
+        </div>
+    </article>
+</section>
