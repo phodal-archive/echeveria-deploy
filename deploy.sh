@@ -18,6 +18,7 @@ git clone https://github.com/phodal-archive/echeveria-deploy code
 git clone https://github.com/phodal-archive/echeveria-content content
 pwd
 cp -a content/contents code/content
+cp -a content/contents content
 
 cd code
 
@@ -26,7 +27,9 @@ npm install grunt-cli -g
 grunt 
 mv dest/* ../
 cd ../
+
 rm -rf code
+rm .rf content
 
 touch .
 
