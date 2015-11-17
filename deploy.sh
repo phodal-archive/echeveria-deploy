@@ -16,8 +16,10 @@ git reset upstream/gh-pages
 
 git clone https://github.com/phodal-archive/echeveria-deploy code
 git clone https://github.com/phodal-archive/echeveria-content content
+cd content
 git pull --rebase
-pwd
+cd ..
+
 cp -a content/contents code/content
 cp -a content/contents api
 
