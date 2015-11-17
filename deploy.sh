@@ -29,7 +29,7 @@ mv dest/* ../
 cd ../
 
 rm -rf code
-rm .rf content
+rm -rf content
 
 touch .
 
