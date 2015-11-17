@@ -18,7 +18,7 @@ git clone https://github.com/phodal-archive/echeveria-deploy code
 git clone https://github.com/phodal-archive/echeveria-content content
 pwd
 cp -a content/contents code/content
-cp -a content/contents content
+cp -a content/contents api
 
 cd code
 
