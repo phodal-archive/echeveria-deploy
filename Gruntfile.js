@@ -45,8 +45,7 @@ module.exports = function(grunt) {
       assets: {
         files: [
           {expand: true, src: ['css/**'], dest: 'dest/'},
-          {expand: true, src: ['js/**'], dest: 'dest/'},
-          {expand: true, src: ['fancybox/**'], dest: 'dest/'}
+          {expand: true, src: ['js/**'], dest: 'dest/'}
         ]
       }
     },
