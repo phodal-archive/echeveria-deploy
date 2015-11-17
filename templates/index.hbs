@@ -2,3 +2,28 @@
 title: 白米粥 - 无节操地文艺，有节操地浪
 description: 无节操地文艺，有节操地浪.
 ---
+<section id="main">
+    {{#each  blogs }}
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-meta">
+                <a href="{{url }}" class="article-date">
+                    <time datetime="{{date }}" itemprop="datePublished">{{date }}</time>
+                </a>
+            </div>
+            <div class="article-inner">
+                <header class="article-header">
+                    <h1 itemprop="name">
+                        <a class="article-title" href="/blog/{{url }}.html">{{title}}</a>
+                    </h1>
+                </header>
+                <div class="article-entry" itemprop="articleBody">
+                    {{#markdown}}
+                        {{description }}
+                    {{/markdown}}
+                </div>
+                <footer class="article-footer">
+                </footer>
+            </div>
+        </article>
+    {{/each}}
+</section>

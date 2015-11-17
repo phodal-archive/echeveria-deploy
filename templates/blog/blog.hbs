@@ -1,7 +1,7 @@
 <article class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-meta">
-        <a href="{{blog-post.url }}" class="article-date">
-            <time datetime="{{blog-post.date }}" itemprop="datePublished">{{blog-post.date }}</time>
+        <a href="{{url }}" class="article-date">
+            <time datetime="{{date }}" itemprop="datePublished">{{date }}</time>
         </a>
     </div>
 
@@ -9,13 +9,13 @@
         <input type="hidden" class="isFancy"/>
         <header class="article-header">
             <h1 itemprop="name">
-                <a class="article-title" href="{{blog-post.url }}">{{blog-post.title }}</a>
+                <a class="article-title" href="/blog/{{url }}">{{title }}</a>
             </h1>
         </header>
         <div class="article-entry" itemprop="articleBody">
             <p>
                 {{#markdown}}
-                    {{blog-post.description }}
+                    {{blogpost }}
                 {{/markdown}}
             </p>
         </div>
