@@ -27,7 +27,6 @@ grunt
 mv dest/* ../
 cd ../
 rm -rf code
-rm -rf content
 
 touch .
 
