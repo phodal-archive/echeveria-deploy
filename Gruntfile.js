@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 
     watch: {
       site: {
-        files: ['Gruntfile.js', 'templates/**/*.hbs', 'js/**/*.js', 'css/**/*.js'],
+        files: ['Gruntfile.js', 'data/**/*.json', 'templates/**/*.hbs', 'js/**/*.js', 'css/**/*.js'],
         tasks: ['clean', 'assemble', 'copy']
       }
     }
