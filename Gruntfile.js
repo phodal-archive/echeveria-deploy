@@ -54,7 +54,13 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9001,
-          base: 'dest'
+          base: {
+            path: 'dest',
+            options: {
+              index: 'index',
+              maxAge: 300000
+            }
+          }
         }
       }
     },
