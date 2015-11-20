@@ -54,6 +54,7 @@ module.exports = function (grunt) {
                         catch (e) {
                             grunt.fail.warn(e);
                         }
+                        fragment.description = fragment.article.substring(0, 200);
                         delete fragment.article;
                         json.push(fragment);
                     }
