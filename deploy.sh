@@ -28,7 +28,7 @@ npm install
 npm install grunt-cli -g
 grunt
 
-cp -a content/content api
+cp -a ../content/content api
 mv dest/* ../
 cd ../
 
