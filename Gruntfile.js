@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         flatten: true,
         partials: ['templates/includes/*.hbs'],
         layoutdir: 'templates/layouts',
-        data: 'content/blog/blogs.json',
+        data: 'content/blog/articles.json',
         layout: 'default.hbs'
       },
       site: {
@@ -70,8 +70,16 @@ module.exports = function(grunt) {
         files: ['Gruntfile.js', 'data/**/*.json', 'templates/**/*.hbs', 'js/**/*.js', 'css/**/*.js'],
         tasks: ['clean', 'assemble', 'copy']
       }
+    },
+    "merge-json": {
+      "articleLists": {
+        src: [ "content/*.json" ],
+        dest: "content/blog/articles.json"
+      }
     }
   });
+
+  grunt.task.loadTasks('./tasks/');
 
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-clean');
