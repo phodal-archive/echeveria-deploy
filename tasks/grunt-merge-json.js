@@ -26,9 +26,10 @@
 module.exports = function (grunt) {
     /* global require: false */
     var chalk = require("chalk");
-    var _ = require("lodash");
+    var sanitizeHtml = require('sanitize-html');
 
-    grunt.registerMultiTask("merge-json", "Merge Multiple JSON Files", function () {
+
+  grunt.registerMultiTask("merge-json", "Merge Multiple JSON Files", function () {
         /*  prepare options  */
         var options = this.options({
             replacer: null,
@@ -54,7 +55,7 @@ module.exports = function (grunt) {
                         catch (e) {
                             grunt.fail.warn(e);
                         }
-                        fragment.description = fragment.article.substring(0, 200);
+                        fragment.description = sanitizeHtml(fragment.article).substring(0, 200);
                         delete fragment.article;
                         delete fragment.articleHTML;
                         json.push(fragment);

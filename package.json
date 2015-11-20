@@ -19,7 +19,8 @@
     "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-watch": "^0.6.1",
     "load-grunt-tasks": "^3.3.0",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "sanitize-html": "^1.11.1"
   },
   "keywords": []
 }
