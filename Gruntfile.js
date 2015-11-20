@@ -88,5 +88,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('dev', ['default', 'connect:server', 'watch:site']);
-  grunt.registerTask('default', ['clean', 'assemble', 'copy']);
+  grunt.registerTask('default', ['clean', 'merge-json', 'assemble', 'copy']);
 };
