@@ -21,13 +21,14 @@ git pull --rebase
 cd ..
 
 cp -a content/content code/content
-cp -a content/content api
 
 cd code
 
 npm install
 npm install grunt-cli -g
-grunt 
+grunt
+
+cp -a content/content api
 mv dest/* ../
 cd ../
 
