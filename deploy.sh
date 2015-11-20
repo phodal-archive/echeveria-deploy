@@ -20,8 +20,8 @@ cd content
 git pull --rebase
 cd ..
 
-cp -a content/contents code/content
-cp -a content/contents api
+cp -a content/content code/content
+cp -a content/content api
 
 cd code
 
