@@ -1,11 +1,11 @@
 var _ = require('lodash');
 var path = require('path');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
-  var recipeTemplate = grunt.file.read('./templates/blog/blog.hbs');
+  var recipeTemplate = grunt.file.read('./src/templates/blog/blog.hbs');
 
-  var pages = _.flatten(_.map(grunt.file.expand('./content/*.json'), function(filepath) {
+  var pages = _.flatten(_.map(grunt.file.expand('./src/content/*.json'), function (filepath) {
     var data = grunt.file.readJSON(filepath);
     return {
       filename: path.basename(filepath, path.extname(filepath)),
@@ -20,33 +20,33 @@ module.exports = function(grunt) {
       options: {
         plugins: ['sitemap'],
         flatten: true,
-        partials: ['templates/includes/*.hbs'],
-        layoutdir: 'templates/layouts',
+        partials: ['src/templates/includes/*.hbs'],
+        layoutdir: 'src/templates/layouts',
         data: 'content/blog/articles.json',
         layout: 'default.hbs'
       },
       site: {
-        files: {'dest/': ['templates/*.hbs']}
+        files: {'dest/': ['src/templates/*.hbs']}
       },
       blogs: {
         options: {
           flatten: true,
-          layoutdir: 'templates/layouts',
+          layoutdir: 'src/templates/layouts',
           data: 'content/*.json',
-          partials: ['templates/includes/*.hbs'],
+          partials: ['src/templates/includes/*.hbs'],
           pages: pages
         },
         files: [
-          { dest: './dest/blog/', src: '!*' }
+          {dest: './dest/blog/', src: '!*'}
         ]
       }
     },
     copy: {
       assets: {
         files: [
-          {expand: true, src: ['css/**'], dest: 'dest/'},
-          {expand: true, src: ['js/**'], dest: 'dest/'},
-          {expand: true, src: ['public/**'], dest: 'dest/'}
+          {expand: true, cwd: 'src/', src: ['css/**'], dest: 'dest/'},
+          {expand: true, cwd: 'src/', src: ['js/**'], dest: 'dest/'},
+          {expand: true, cwd: 'src/', src: ['public/**'], dest: 'dest/'}
         ]
       }
     },
@@ -67,13 +67,13 @@ module.exports = function(grunt) {
 
     watch: {
       site: {
-        files: ['Gruntfile.js', 'data/**/*.json', 'templates/**/*.hbs', 'js/**/*.js', 'css/**/*.js'],
+        files: ['Gruntfile.js', 'data/**/*.json', 'src/templates/**/*.hbs', 'src/js/**/*.js', 'src/css/**/*.css'],
         tasks: ['clean', 'assemble', 'copy']
       }
     },
     "merge-json": {
       "articleLists": {
-        src: [ "content/*.json" ],
+        src: ["content/*.json"],
         dest: "content/blog/articles.json"
       }
     }
