@@ -56,6 +56,7 @@ module.exports = function (grunt) {
                         }
                         fragment.description = fragment.article.substring(0, 200);
                         delete fragment.article;
+                        delete fragment.articleHTML;
                         json.push(fragment);
                     }
                 });
